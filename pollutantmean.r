@@ -20,5 +20,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
              }
              return(Sum.pollutant/Count.pollutant)
      }
-     if pollutant 
+     if (pollutant != "nitrate" & pollutant != "sulfate") {
+             return(0)
+     }
 }
