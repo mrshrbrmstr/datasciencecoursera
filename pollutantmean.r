@@ -1,4 +1,4 @@
-pollutantmean <- function(directory, pollutant, id = 1:332) {
+pollutantmean <- function(directory, pollutant, id) {
      setwd(directory)
      Count.pollutant <- 0
      Sum.pollutant <- 0
