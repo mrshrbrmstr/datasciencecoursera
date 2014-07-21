@@ -16,7 +16,7 @@ corr <- function(directory, threshold = 0) {
     setwd(cur)                                        ## Restores wd prior to other function
     
     size.corr <- size.corr + 1
-    corr.vector[size.corr] <- round(cor(tmp$sulfate, tmp$nitrate, use = "pairwise.complete.obs"), digits=5)
+    corr.vector[size.corr] <- round(cor(tmp$sulfate, tmp$nitrate, use = "pairwise.complete.obs"), digits = 4)
     
   }
   
