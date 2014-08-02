@@ -8,7 +8,7 @@ best <- function(state, outcome) {
                   ## if value of state is one of the U.S. 50 states, this assigns "TRUE"
                   ## otherwise it assigns "FALSE"
             if (is.state.valid == "FALSE") {
-                  morestates.abb <- ("GU", "PR", "VI", "DC")
+                  morestates.abb <- c("GU", "PR", "VI", "DC")
                   is.state.valid <- state %in% morestates.abb
                   ## if value of state is a U.S. territory included in data, this assigns "TRUE"
                   ## otherwise it remains "FALSE"
@@ -38,6 +38,6 @@ best <- function(state, outcome) {
       best.hospitals <- state.hospitals[state.hospitals[,2] == best.rate,1]
       
             ## Sort the hospitals by name and return the first in the list
-      return(sort(as.character(best.hospitals[,1]))[1])
+      return(sort(as.character(best.hospitals))[1])
       
 }
