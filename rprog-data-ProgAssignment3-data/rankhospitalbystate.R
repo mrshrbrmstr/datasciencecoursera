@@ -1,9 +1,6 @@
-rankhospital <- function(state, outcome, num = "best") {
+rankhospitalbystate <- function(tmp, state, outcome, num = "best") {
       
       if (num == "best") return(best(state, outcome))
-      
-      tmp <- read.csv("outcome-of-care-measures.csv")
-      ## reads the csv file in current working directory
       
       ## Now validate the state input of the function call
       is.state.valid <- state %in% state.abb
